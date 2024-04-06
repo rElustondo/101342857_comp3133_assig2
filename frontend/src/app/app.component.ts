@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,17 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'frontend';
+  _userDetails:any;
+  userDetails:any;
+  constructor(private router:Router) {}
+  ngOnInit(): void {
+    this._userDetails = localStorage.getItem('assignment2-login-details');
+    this.userDetails = this._userDetails ? JSON.parse(this._userDetails) : null;
+  }
+  logout() {
+    localStorage.removeItem('assignment2-login-details');
+    this.userDetails = null;
+    this._userDetails = null;
+    this.router.navigate(['/login']);
+  }
 }

@@ -1,7 +1,15 @@
 <nav>
   <ul>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/signup">Signup</a></li>
+    @if (userDetails !== null) {
+      <li><button (click)="logout()">SignOut</button></li>
+    }
+    @else {
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/signup">Signup</a></li>
+    }
   </ul>
 </nav>
+@if (userDetails !== null) {
+  <p>Welcome {{ userDetails.username }}</p>
+}
 <router-outlet></router-outlet>
