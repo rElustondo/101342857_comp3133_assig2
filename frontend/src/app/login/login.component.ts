@@ -15,17 +15,17 @@ export class LoginComponent {
   password = "";
   constructor(private router: Router, private employeeService:EmployeeService) {}
   onSubmit() {
+    debugger
     console.log('Submitted!');
     console.log(this.username);
     console.log(this.password);
     this.employeeService.login(this.username, this.password).subscribe((data) => {
       console.log(data);
       if(data.data.login.username === this.username) {
-      
         localStorage.setItem('assignment2-login-details', JSON.stringify(data.data.login));
+        this.router.navigate(['/employee-list']);
       }
     });
-  this.router.navigate(['/employee-list']);
    
   }
 }
