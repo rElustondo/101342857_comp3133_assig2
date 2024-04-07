@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private BASE_URL = `http://localhost:3000`; // Assuming your GraphQL API endpoint is '/graphql'
+  private BASE_URL = `https://assignment2backend-998995de583c.herokuapp.com`; // Assuming your GraphQL API endpoint is '/graphql'
  
   constructor(private httpClient: HttpClient) { }
 

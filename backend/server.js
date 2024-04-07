@@ -5,7 +5,8 @@ const typeDefs = require('./schema')
 const resolvers = require('./resolver')
 const PORT = process.env.PORT || 3000;
 const app = express();
-
+const cors = require('cors');
+app.use(cors());
 const connectionString = "mongodb+srv://rodrigo:YHzLdkuvhwHQ8ZUZ@cluster0.bbqnvc3.mongodb.net/comp3133_assigment1?retryWrites=true&w=majority"
 
 mongoose.connect(connectionString, {
