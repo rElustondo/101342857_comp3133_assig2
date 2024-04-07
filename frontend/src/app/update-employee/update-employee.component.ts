@@ -29,4 +29,7 @@ export class UpdateEmployeeComponent {
       this.router.navigate(['/employee-list']);
     });
   }
+  goBack(){
+    this.router.navigate(['/employee-list']);
+  }
 }
