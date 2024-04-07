@@ -14,8 +14,10 @@ export class AppComponent {
   userDetails:any;
   constructor(private router:Router) {}
   ngOnInit(): void {
+    console.log('User details: b4 ng on init', this.userDetails);
     this._userDetails = localStorage.getItem('assignment2-login-details');
     this.userDetails = this._userDetails ? JSON.parse(this._userDetails) : null;
+    console.log('User details: ng on init', this.userDetails);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         this.onRouteChange();
@@ -25,6 +27,9 @@ export class AppComponent {
   onRouteChange(): void {
     console.log('Route changed');
     this.updateUserDetails()
+  }
+  goHome() {
+    this.router.navigate(['/employee-list']);
   }
   logout() {
     localStorage.removeItem('assignment2-login-details');

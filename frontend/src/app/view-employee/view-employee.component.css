@@ -1,0 +1,42 @@
+/* view-employee.component.css */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  /* Style the container and headings */
+  .container {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  /* Style the employee details */
+  .employee-details {
+    margin-top: 20px;
+  }
+  
+  .employee-details p {
+    margin-bottom: 10px;
+  }
+  
+  .employee-details p:last-child {
+    margin-bottom: 0;
+  }
+  

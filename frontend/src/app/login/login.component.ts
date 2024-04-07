@@ -15,7 +15,6 @@ export class LoginComponent {
   password = "";
   constructor(private router: Router, private employeeService:EmployeeService) {}
   onSubmit() {
-    debugger
     console.log('Submitted!');
     console.log(this.username);
     console.log(this.password);

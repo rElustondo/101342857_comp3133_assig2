@@ -1,0 +1,33 @@
+<!-- update-employee.component.html -->
+
+<div class="container">
+    <h2>Update Employee Details</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="employee.email" required>
+      </div>
+      <div class="form-group">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" [(ngModel)]="employee.first_name" required>
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" [(ngModel)]="employee.last_name" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" [(ngModel)]="employee.gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" [(ngModel)]="employee.salary" required>
+      </div>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  

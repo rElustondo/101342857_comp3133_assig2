@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>View Employee Details</h2>
+    <div>
+        <!-- <p><strong>Employee ID:</strong> {{ employee._id }}</p> -->
+        <p><strong>Email:</strong> {{ employee.email }}</p>
+        <p><strong>First Name:</strong> {{ employee.first_name }}</p>
+        <p><strong>Last Name:</strong> {{ employee.last_name }}</p>
+        <p><strong>Gender:</strong> {{ employee.gender }}</p>
+        <p><strong>Salary:</strong> {{ employee.salary }}</p>
+    </div>
+    <button (click)="goBack()" class="btn btn-primary">Go Back</button>
+</div>

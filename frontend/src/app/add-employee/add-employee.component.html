@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+  
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" [(ngModel)]="formData.first_name" required>
+  
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" [(ngModel)]="formData.last_name" required>
+  
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="formData.gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" name="salary" [(ngModel)]="formData.salary" required>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
